@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy & Terms of Use - God's Angels Junior School</title>
+    <meta name="description" content="Privacy Policy and Terms of Use for God's Angels Junior School">
+    <meta name="keywords" content="privacy policy, terms of use, school privacy, God's Angels, education">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #fdf8f0;
+            --soft-cream: #f8efd8;
+            --white: #ffffff;
+            --blue: #4a6fa5;
+            --light-blue: #87ceeb;
+            --dark-blue: #2c3e50;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --accent: #4a6fa5;
+            --primary: #2c3e50;
+            --accent-light: #e3f2fd;
+            --primary-blue: #3498db;
+            --primary-green: #2ecc71;
+            --primary-purple: #9b59b6;
+            --primary-orange: #e67e22;
+            --gold: #d4af37;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--soft-cream) 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 60px;
+            margin-right: 15px;
+        }
+        
+        .logo h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--dark-blue);
+            background: linear-gradient(to right, var(--dark-blue), var(--blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .logo span {
+            font-weight: 700;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-blue);
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+            position: relative;
+            padding: 5px 0;
+        }
+        
+        nav ul li a:hover {
+            color: var(--blue);
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--blue);
+            transition: width 0.3s;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark-blue);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('C:/Users/Maggie/Desktop/school/images/gods angel.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 150px 0 100px;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, transparent 20%, var(--primary) 150%);
+            opacity: 0.1;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: var(--white);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            animation: fadeInDown 1s ease;
+        }
+        
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            color: var(--white);
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease 0.2s forwards;
+            opacity: 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--blue);
+            color: var(--white);
+            padding: 14px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: 2px solid var(--blue);
+            margin: 0 10px;
+            box-shadow: 0 4px 15px rgba(74, 111, 165, 0.4);
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: var(--blue);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(74, 111, 165, 0.6);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--blue);
+            border: 2px solid var(--blue);
+        }
+        
+        .btn-outline:hover {
+            background: var(--blue);
+            color: var(--white);
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: var(--dark-blue);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 20px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--blue);
+            border-radius: 2px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 20px auto 0;
+        }
+        
+        /* Policy Content */
+        .policy-content {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            margin-bottom: 40px;
+        }
+        
+        .policy-content h3 {
+            color: var(--blue);
+            margin: 30px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--cream);
+        }
+        
+        .policy-content h4 {
+            color: var(--dark-blue);
+            margin: 25px 0 10px;
+        }
+        
+        .policy-content p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .policy-content ul {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+        
+        .policy-content li {
+            margin-bottom: 10px;
+        }
+        
+        .policy-section {
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .policy-section:last-child {
+            border-bottom: none;
+        }
+        
+        .highlight-box {
+            background: var(--cream);
+            border-left: 4px solid var(--blue);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .contact-info {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-card {
+            flex: 1;
+            min-width: 250px;
+            background: var(--cream);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .contact-card h4 {
+            color: var(--blue);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-card h4 i {
+            margin-right: 10px;
+            color: var(--blue);
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--primary), #1a2530);
+            color: var(--white);
+            padding: 80px 0 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--blue);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 12px;
+            font-size: 1.4rem;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--blue);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-column ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-column ul li a i {
+            margin-right: 10px;
+            color: var(--blue);
+            width: 20px;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--blue);
+            transform: translateX(5px);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: all 0.3s;
+            font-size: 1.2rem;
+        }
+        
+        .social-links a:hover {
+            background: var(--blue);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(74, 111, 165, 0.4);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #bbb;
+            font-size: 0.95rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .copyright a {
+            color: var(--blue);
+            text-decoration: none;
+        }
+        
+        .copyright a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 3rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav ul {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                background: var(--white);
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                transform: translateY(-150%);
+                transition: transform 0.3s;
+            }
+            
+            nav ul.active {
+                transform: translateY(0);
+            }
+            
+            nav ul li {
+                margin: 15px 0;
+            }
+            
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.3rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                padding: 120px 0 80px;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                display: block;
+                margin: 15px auto;
+                width: 80%;
+            }
+        }
+    </style>
+    <link rel="icon" href="C:\Users\Maggie\Desktop\school\images/WhatsApp_Image_2025-11-29_at_21.35.51_c03e9a98-removebg-preview.png" type="image/png">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <!-- School badge (base64 encoded SVG) -->
+                <img src="C:\Users\Maggie\Desktop\school\images/WhatsApp_Image_2025-11-29_at_21.35.51_c03e9a98-removebg-preview.png" alt="School Badge" style="height: 60px; margin-right: 15px;">
+                <h1>God's<span>Angels</span>Junior School</h1>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="C:\Users\Maggie\Desktop\school\school.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h2>Privacy Policy & Terms of Use</h2>
+            <p>Our commitment to protecting your privacy and outlining terms of use</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Privacy Policy Section -->
+        <section id="privacy-policy">
+            <div class="section-title">
+                <h2>Privacy Policy</h2>
+                <p class="section-subtitle">How we collect, use, and protect your personal information</p>
+            </div>
+            
+            <div class="policy-content">
+                <div class="policy-section">
+                    <h3>Introduction</h3>
+                    <p>God's Angels Junior School ("we", "our", or "us") respects the privacy of our students, parents, staff, and website visitors. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and interact with our school services.</p>
+                    
+                    <div class="highlight-box">
+                        <p><strong>Effective Date:</strong> January 1, 2025<br>
+                        <strong>Last Updated:</strong> November 29, 2025</p>
+                    </div>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Information We Collect</h3>
+                    <p>We may collect information about you in various ways when you:</p>
+                    <ul>
+                        <li>Register your child for admission or enrollment</li>
+                        <li>Use our website or online services</li>
+                        <li>Attend school events or communicate with us</li>
+                        <li>Subscribe to our newsletters or communications</li>
+                        <li>Volunteer at school activities</li>
+                    </ul>
+                    
+                    <h4>Types of Information Collected:</h4>
+                    <ul>
+                        <li><strong>Personal Information:</strong> Names, addresses, phone numbers, email addresses, emergency contacts</li>
+                        <li><strong>Academic Records:</strong> Student grades, attendance, disciplinary records, special needs information</li>
+                        <li><strong>Financial Information:</strong> Payment details, billing information (handled securely by third-party processors)</li>
+                        <li><strong>Health Information:</strong> Medical records, dietary restrictions, allergies (only when necessary)</li>
+                        <li><strong>Photographs/Videos:</strong> Images taken during school events (with consent)</li>
+                        <li><strong>Website Usage Data:</strong> IP addresses, browser types, pages visited, time spent on site</li>
+                    </ul>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>How We Use Your Information</h3>
+                    <p>We use collected information for the following purposes:</p>
+                    <ul>
+                        <li>Administering student enrollment and academic programs</li>
+                        <li>Communicating with parents and guardians about school activities</li>
+                        <li>Managing school operations and improving educational services</li>
+                        <li>Ensuring student safety and well-being</li>
+                        <li>Processing payments and managing accounts</li>
+                        <li>Conducting school events and activities</li>
+                        <li>Improving our website and services</li>
+                        <li>Complying with legal obligations</li>
+                    </ul>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Data Protection and Security</h3>
+                    <p>We implement appropriate technical and organizational measures to protect your information against unauthorized access, alteration, disclosure, or destruction. These measures include:</p>
+                    <ul>
+                        <li>Secure servers and encrypted data transmission</li>
+                        <li>Access controls limiting data access to authorized personnel</li>
+                        <li>Regular security audits and updates</li>
+                        <li>Staff training on data protection practices</li>
+                        <li>Secure disposal of physical and electronic records</li>
+                    </ul>
+                    
+                    <div class="highlight-box">
+                        <p><strong>Note:</strong> While we take reasonable steps to protect your information, no method of transmission over the internet or electronic storage is 100% secure. We cannot guarantee absolute security.</p>
+                    </div>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Information Sharing</h3>
+                    <p>We do not sell, trade, or rent your personal information. We may share your information with:</p>
+                    <ul>
+                        <li>Authorized school staff and faculty who need access for legitimate purposes</li>
+                        <li>Third-party service providers who assist with school operations (payment processors, IT services)</li>
+                        <li>Legal authorities when required by law or to protect our rights</li>
+                        <li>Other schools or educational institutions for transfer purposes</li>
+                        <li>Parents/legal guardians of minor students</li>
+                    </ul>
+                    
+                    <p>We require all third-party service providers to maintain appropriate security measures and comply with applicable privacy laws.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Your Rights</h3>
+                    <p>Depending on your location, you may have the following rights regarding your personal information:</p>
+                    <ul>
+                        <li>Request access to your personal information</li>
+                        <li>Request correction of inaccurate information</li>
+                        <li>Request deletion of your information (subject to legal requirements)</li>
+                        <li>Restrict processing of your information</li>
+                        <li>Object to processing based on legitimate interests</li>
+                        <li>Withdraw consent where processing is based on consent</li>
+                        <li>Receive a copy of your information in a portable format</li>
+                    </ul>
+                    
+                    <p>To exercise these rights, contact us at the information provided below. We will respond to your request within 30 days.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Cookies and Tracking Technologies</h3>
+                    <p>Our website may use cookies and similar technologies to enhance user experience and analyze website traffic. Cookies are small data files stored on your device. You can control cookie preferences through your browser settings.</p>
+                    
+                    <p>We use cookies for:</p>
+                    <ul>
+                        <li>Website functionality and performance</li>
+                        <li>Analyzing site usage and trends</li>
+                        <li>Personalizing content and advertisements</li>
+                        <li>Remembering user preferences</li>
+                    </ul>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Children's Privacy</h3>
+                    <p>Our services are directed toward children under the age of 13. We do not knowingly collect personal information from children without parental consent. If you believe we have collected information from a child without verification, please contact us immediately.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Changes to This Policy</h3>
+                    <p>We may update this Privacy Policy periodically. When we do, we will post the updated policy on this page with an updated effective date. We encourage you to review this policy regularly for any changes.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Contact Information</h3>
+                    <p>If you have questions about this Privacy Policy, please contact us:</p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <h4><i class="fas fa-envelope"></i> Email</h4>
+                            <p>privacy@godsangels.edu</p>
+                            <p>info@godsangels.edu</p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <h4><i class="fas fa-phone"></i> Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                            <p>Extension: 251</p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <h4><i class="fas fa-map-marker-alt"></i> Address</h4>
+                            <p>123 Education Lane<br>Grace City, GC 10001</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Terms of Use Section -->
+        <section id="terms-of-use">
+            <div class="section-title">
+                <h2>Terms of Use</h2>
+                <p class="section-subtitle">Conditions governing your use of our website and services</p>
+            </div>
+            
+            <div class="policy-content">
+                <div class="policy-section">
+                    <h3>Acceptance of Terms</h3>
+                    <p>By accessing or using the God's Angels Junior School website and services, you agree to comply with and be bound by these Terms of Use. If you do not agree to these terms, you should not use our website or services.</p>
+                    
+                    <div class="highlight-box">
+                        <p><strong>Effective Date:</strong> January 1, 2025<br>
+                        <strong>Last Updated:</strong> November 29, 2025</p>
+                    </div>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Use License</h3>
+                    <p>Permission is granted to temporarily download one copy of the materials on God's Angels Junior School's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
+                    <ul>
+                        <li>Modify or copy the materials</li>
+                        <li>Use the materials for any commercial purpose</li>
+                        <li>Attempt to decompile or reverse engineer any software contained on the school's website</li>
+                        <li>Remove any copyright or other proprietary notations from the materials</li>
+                        <li>Transfer the materials to another person or "mirror" the materials on any other server</li>
+                    </ul>
+                    
+                    <p>This license shall automatically terminate if you violate any of these restrictions and may be terminated by God's Angels Junior School at any time.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Disclaimer</h3>
+                    <p>The materials on God's Angels Junior School's website are provided on an 'as is' basis. God's Angels Junior School makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
+                    
+                    <p>Further, God's Angels Junior School does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Limitations</h3>
+                    <p>In no event shall God's Angels Junior School or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on God's Angels Junior School's website, even if God's Angels Junior School or a God's Angels Junior School authorized representative has been notified orally or in writing of the possibility of such damage.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Accuracy of Materials</h3>
+                    <p>The materials appearing on God's Angels Junior School's website could include technical, typographical, or photographic errors. God's Angels Junior School does not warrant that any of the materials on its website are accurate, complete, or current. God's Angels Junior School may make changes to the materials contained on its website at any time without notice.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Links</h3>
+                    <p>God's Angels Junior School has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by God's Angels Junior School of the site. Use of any such linked website is at the user's own risk.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Modifications</h3>
+                    <p>God's Angels Junior School may revise these terms of use at any time without notice. By using this website you are agreeing to be bound by the then current version of these terms of use.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Governing Law</h3>
+                    <p>These terms and conditions are governed by and construed in accordance with the laws of the State of [State], United States, and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Contact Information</h3>
+                    <p>If you have questions about these Terms of Use, please contact us:</p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <h4><i class="fas fa-envelope"></i> Email</h4>
+                            <p>legal@godsangels.edu</p>
+                            <p>info@godsangels.edu</p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <h4><i class="fas fa-phone"></i> Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                            <p>Extension: 251</p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <h4><i class="fas fa-map-marker-alt"></i> Address</h4>
+                            <p>123 Education Lane<br>Grace City, GC 10001</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>God's Angels Junior School</h3>
+                    <p>Providing Christ-centered education that nurtures minds, hearts, and spirits since 1998.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="academics.html"><i class="fas fa-chevron-right"></i> Academics</a></li>
+                        <li><a href="admissions.html"><i class="fas fa-chevron-right"></i> Admissions</a></li>
+                        <li><a href="safety.html"><i class="fas fa-chevron-right"></i> Safety</a></li>
+                        <li><a href="faculty.html"><i class="fas fa-chevron-right"></i> Faculty</a></li>
+                        <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+                        <li><a href="admin.html"><i class="fas fa-chevron-right"></i> Administration</a></li>
+                        <li><a href="community.html"><i class="fas fa-chevron-right"></i> Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                </div>
+                <div class="footer-column">
+                    <h3>Admissions</h3>
+                    <ul>
+                        <li><a href="C:\Users\Maggie\Desktop\school\admission.html"><i class="fas fa-chevron-right"></i> Admission Process</a></li>
+                        <li><a href="C:\Users\Maggie\Desktop\school\admission.html"><i class="fas fa-chevron-right"></i> Tuition & Fees</a></li>
+                        <li><a href="C:\Users\Maggie\Desktop\school\admission.html"><i class="fas fa-chevron-right"></i> Scholarships</a></li>
+                        <li><a href="C:\Users\Maggie\Desktop\school\admission.html"><i class="fas fa-chevron-right"></i> Enrollment Form</a></li>
+                        <li><a href="C:\Users\Maggie\Desktop\school\FAQ.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 God's Angels Junior School. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('nav ul');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+        
+        // Initialize animations
+        window.addEventListener('load', () => {
+            document.querySelector('.hero p').style.animationDelay = '0.2s';
+            document.querySelector('.hero p').style.opacity = '1';
+        });
+    </script>
+</body>
+</html>
+

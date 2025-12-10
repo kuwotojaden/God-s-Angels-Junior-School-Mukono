@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Application - God's Angels Junior School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #fdf8f0;
+            --soft-cream: #f8efd8;
+            --white: #ffffff;
+            --blue: #4a6fa5;
+            --light-blue: #87ceeb;
+            --dark-blue: #2c3e50;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --accent: #4a6fa5;
+            --primary: #2c3e50;
+            --accent-light: #e3f2fd;
+            --primary-blue: #3498db;
+            --primary-green: #2ecc71;
+            --primary-purple: #9b59b6;
+            --primary-orange: #e67e22;
+            --gold: #d4af37;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--soft-cream) 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            padding: 15px 0;
+            margin-bottom: 40px;
+        }
+        
+        .site-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 16px 24px;
+  /* Optional: light background to distinguish header */
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: 500;
+  font-size: 16px;
+
+  /* Enclosure styling */
+  background-color: #f8f9fa;
+  padding: 10px 16px;
+  border-radius: 12px; /* Soft pill shape */
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04); /* Subtle depth, not flashy */
+  transition: all 0.2s ease;
+
+  /* Ensure crisp rendering */
+  backface-visibility: hidden;
+}
+
+.home-link:hover {
+  background-color: #f0f4ff;
+  color: #0056b3;
+  border-color: #c8d4f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.home-link svg {
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 60px;
+            margin-right: 15px;
+        }
+        
+        .logo h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--dark-blue);
+            background: linear-gradient(to right, var(--dark-blue), var(--blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .logo span {
+            font-weight: 700;
+        }
+        
+        /* Main Content */
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .admission-section {
+            flex: 1;
+            min-width: 300px;
+            background: var(--white);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .admission-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--blue);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--dark-blue);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--blue);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark-blue);
+            font-size: 1.05rem;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: var(--blue);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(74, 111, 165, 0.2);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--blue);
+            color: var(--white);
+            padding: 14px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: 2px solid var(--blue);
+            margin: 0 10px;
+            box-shadow: 0 4px 15px rgba(74, 111, 165, 0.4);
+            width: 100%;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: var(--blue);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(74, 111, 165, 0.6);
+        }
+        
+        .info-section {
+            flex: 1;
+            min-width: 300px;
+            background: var(--white);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        
+        .admission-info {
+            margin-bottom: 30px;
+        }
+        
+        .admission-info h3 {
+            color: var(--blue);
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .admission-info h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 3px;
+            background: var(--blue);
+        }
+        
+        .info-detail {
+            display: flex;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: var(--cream);
+            border-radius: 10px;
+        }
+        
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--blue), #6b8cbc);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            margin-right: 20px;
+            flex-shrink: 0;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(74, 111, 165, 0.3);
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--primary), #1a2530);
+            color: var(--white);
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 12px;
+            font-size: 1.4rem;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--blue);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-column ul li a i {
+            margin-right: 10px;
+            color: var(--blue);
+            width: 20px;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--blue);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--blue);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #bbb;
+            font-size: 0.95rem;
+        }
+        
+        /* Success Message */
+        .success-message {
+            background: var(--primary-green);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <!-- School badge (base64 encoded SVG) -->
+                <img src="C:\Users\Maggie\Desktop\school/WhatsApp_Image_2025-11-29_at_21.35.51_c03e9a98-removebg-preview.png" alt="School Badge" style="height: 60px; margin-right: 15px;">
+                <h1>God's <span>Angels</span> Junior School</h1>
+                <a href="/" class="home-link">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+      <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L8.707 1.5Z"/>
+    </svg>
+    <span>Home</span>
+  </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <section class="admission-section">
+                <div class="section-title">
+                    <h2>Admission Application</h2>
+                    <p class="section-subtitle">Apply for your child's admission to our school</p>
+                </div>
+                
+                <!-- Success Message -->
+                <div id="successMessage" class="success-message">
+                    <i class="fas fa-check-circle"></i> Thank you! Your application has been sent successfully.
+                </div>
+                
+                <form id="admissionForm">
+                    <div class="form-group">
+                        <label for="parentName">Parent/Guardian Name</label>
+                        <input type="text" id="parentName" name="parentName" required placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="parentPhone">Parent/Guardian Phone Number</label>
+                        <input type="tel" id="parentPhone" name="parentPhone" required placeholder="Enter your phone number">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="parentEmail">Parent/Guardian Email Address</label>
+                        <input type="email" id="parentEmail" name="parentEmail" required placeholder="Enter your email address">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="studentName">Student's Full Name</label>
+                        <input type="text" id="studentName" name="studentName" required placeholder="Enter student's full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="class">Class Applying For</label>
+                        <select id="class" name="class" required>
+                            <option value="" disabled selected>Select a class</option>
+                            <option value="baby">Baby Class (Ages 3-4)</option>
+                            <option value="nursery">Nursery Class (Ages 4-5)</option>
+                            <option value="kg">Kindergarten (Ages 5-6)</option>
+                            <option value="primary1">Primary 1 (Ages 6-7)</option>
+                            <option value="primary2">Primary 2 (Ages 7-8)</option>
+                            <option value="primary3">Primary 3 (Ages 8-9)</option>
+                            <option value="primary4">Primary 4 (Ages 9-10)</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn">Submit Application</button>
+                </form>
+            </section>
+            
+            <section class="info-section">
+                <div class="section-title">
+                    <h2>Admission Information</h2>
+                    <p class="section-subtitle">Important details about our admission process</p>
+                </div>
+                
+                <div class="admission-info">
+                    <h3>Admission Requirements</h3>
+                    <p>For admission to God's Angels Junior School, please ensure you have the following documents ready:</p>
+                    <ul style="padding-left: 20px; margin: 15px 0;">
+                        <li>Birth certificate or passport</li>
+                        <li>Previous school records (if applicable)</li>
+                        <li>Immunization records</li>
+                        <li>Two recent passport photos</li>
+                    </ul>
+                    
+                    <h3>Admission Process</h3>
+                    <p>Our admission process includes:</p>
+                    <ol style="padding-left: 20px; margin: 15px 0;">
+                        <li>Application submission (completed online)</li>
+                        <li>Review of application by our admissions committee</li>
+                        <li>Notification of acceptance</li>
+                        <li>Payment of registration fee</li>
+                        <li>Orientation session for parents and students</li>
+                    </ol>
+                </div>
+                
+                <div class="admission-info">
+                    <h3>Important Information</h3>
+                    <div class="info-detail">
+                        <div class="info-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Application Deadline</h4>
+                            <p>Applications for the next academic year are accepted until December 31st.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-detail">
+                        <div class="info-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div>
+                            <h4>Registration Fee</h4>
+                            <p>The registration fee is $50 and is non-refundable upon acceptance.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-detail">
+                        <div class="info-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Required Documents</h4>
+                            <p>Please have all required documents ready before submitting your application.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>God's Angels Junior School</h3>
+                    <p>Providing Christ-centered education that nurtures minds, hearts, and spirits since 2025.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="C:\Users\Maggie\Desktop\school\school.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Academics</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Programs</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> News</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Academics</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Curriculum</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Online Platforms</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Academic Calendar</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Library Resources</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Faculty Directory</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Student Handbook</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Admissions</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Admission Process</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Tuition & Fees</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Scholarships</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Enrollment Form</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> School Tours</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 God's Angels Junior School. All Rights Reserved. | <a href="#" style="color: #bbb;">Privacy Policy</a> | <a href="#" style="color: #bbb;">Terms of Use</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('admissionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const parentName = document.getElementById('parentName').value;
+            const parentPhone = document.getElementById('parentPhone').value;
+            const parentEmail = document.getElementById('parentEmail').value;
+            const studentName = document.getElementById('studentName').value;
+            const classValue = document.getElementById('class').value;
+            
+            // Validate form
+            if (!parentName || !parentPhone || !parentEmail || !studentName || !classValue) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Validate email format
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(parentEmail)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Get class name for display
+            const classOptions = {
+                'baby': 'Baby Class',
+                'nursery': 'Nursery Class',
+                'kg': 'Kindergarten',
+                'primary1': 'Primary 1',
+                'primary2': 'Primary 2',
+                'primary3': 'Primary 3',
+                'primary4': 'Primary 4'
+            };
+            
+            // Create mailto link with form data
+            const mailtoLink = `mailto:godsangeljuniorschoolmukono@gmail.com?subject=${encodeURIComponent('New Admission Application')}&body=${encodeURIComponent(
+                `Admission Application\n\n` +
+                `Parent/Guardian Name: ${parentName}\n` +
+                `Parent/Guardian Phone: ${parentPhone}\n` +
+                `Parent/Guardian Email: ${parentEmail}\n` +
+                `Student's Name: ${studentName}\n` +
+                `Class Applying For: ${classOptions[classValue]}\n\n` +
+                `Thank you for considering God's Angels Junior School for your child's education. We will review your application and contact you soon.`
+            )}`;
+            
+            // Open the user's email client
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Reset form
+            this.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                document.getElementById('successMessage').style.display = 'none';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>

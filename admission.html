@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions & Scholarships - God's Angels Junior School</title>
+    <meta name="description" content="Information about admissions process and scholarship opportunities at God's Angels Junior School">
+    <meta name="keywords" content="admissions, scholarships, school application, financial aid, God's Angels">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #fdf8f0;
+            --soft-cream: #f8efd8;
+            --white: #ffffff;
+            --blue: #4a6fa5;
+            --light-blue: #87ceeb;
+            --dark-blue: #2c3e50;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --accent: #4a6fa5;
+            --primary: #2c3e50;
+            --accent-light: #e3f2fd;
+            --primary-blue: #3498db;
+            --primary-green: #2ecc71;
+            --primary-purple: #9b59b6;
+            --primary-orange: #e67e22;
+            --gold: #d4af37;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--soft-cream) 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 60px;
+            margin-right: 15px;
+        }
+        
+        .logo h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--dark-blue);
+            background: linear-gradient(to right, var(--dark-blue), var(--blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .logo span {
+            font-weight: 700;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-blue);
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+            position: relative;
+            padding: 5px 0;
+        }
+        
+        nav ul li a:hover {
+            color: var(--blue);
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--blue);
+            transition: width 0.3s;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark-blue);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('C:/Users/Maggie/Desktop/school/images/gods angel.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 150px 0 100px;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, transparent 20%, var(--primary) 150%);
+            opacity: 0.1;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: var(--white);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            animation: fadeInDown 1s ease;
+        }
+        
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            color: var(--white);
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease 0.2s forwards;
+            opacity: 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--blue);
+            color: var(--white);
+            padding: 14px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: 2px solid var(--blue);
+            margin: 0 10px;
+            box-shadow: 0 4px 15px rgba(74, 111, 165, 0.4);
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: var(--blue);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(74, 111, 165, 0.6);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--blue);
+            border: 2px solid var(--blue);
+        }
+        
+        .btn-outline:hover {
+            background: var(--blue);
+            color: var(--white);
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: var(--dark-blue);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 20px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--blue);
+            border-radius: 2px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 20px auto 0;
+        }
+        
+        /* Content Cards */
+        .content-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            margin-bottom: 40px;
+        }
+        
+        .card-header {
+            background: var(--blue);
+            color: white;
+            padding: 25px 30px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .card-header i {
+            font-size: 2rem;
+            margin-right: 15px;
+        }
+        
+        .card-header h3 {
+            font-size: 1.8rem;
+            margin: 0;
+        }
+        
+        .card-body {
+            padding: 30px;
+        }
+        
+        .process-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .step {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .step-number {
+            min-width: 50px;
+            height: 50px;
+            background: var(--blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .step-content h4 {
+            margin-bottom: 10px;
+            color: var(--dark-blue);
+        }
+        
+        /* Scholarship Grid */
+        .scholarship-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .scholarship-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .scholarship-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .scholarship-header {
+            background: var(--blue);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .scholarship-body {
+            padding: 25px;
+        }
+        
+        .scholarship-body h4 {
+            color: var(--dark-blue);
+            margin-bottom: 15px;
+        }
+        
+        .scholarship-body ul {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+        
+        .scholarship-body li {
+            margin-bottom: 10px;
+        }
+        
+        /* Application Form */
+        .application-form {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            margin-top: 40px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: var(--dark-blue);
+            font-size: 1.05rem;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--blue);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(74, 111, 165, 0.2);
+        }
+        
+        .form-group textarea {
+            height: 160px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--primary), #1a2530);
+            color: var(--white);
+            padding: 80px 0 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--blue);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 12px;
+            font-size: 1.4rem;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--blue);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-column ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-column ul li a i {
+            margin-right: 10px;
+            color: var(--blue);
+            width: 20px;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--blue);
+            transform: translateX(5px);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: all 0.3s;
+            font-size: 1.2rem;
+        }
+        
+        .social-links a:hover {
+            background: var(--blue);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(74, 111, 165, 0.4);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #bbb;
+            font-size: 0.95rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .copyright a {
+            color: var(--blue);
+            text-decoration: none;
+        }
+        
+        .copyright a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 3rem;
+            }
+            
+            .step {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav ul {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                background: var(--white);
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                transform: translateY(-150%);
+                transition: transform 0.3s;
+            }
+            
+            nav ul.active {
+                transform: translateY(0);
+            }
+            
+            nav ul li {
+                margin: 15px 0;
+            }
+            
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.3rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                padding: 120px 0 80px;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                display: block;
+                margin: 15px auto;
+                width: 80%;
+            }
+        }
+    </style>
+    <link rel="icon" href="C:\Users\Maggie\Desktop\school\images/WhatsApp_Image_2025-11-29_at_21.35.51_c03e9a98-removebg-preview.png" type="image/png">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <!-- School badge (base64 encoded SVG) -->
+                <img src="C:\Users\Maggie\Desktop\school\images/WhatsApp_Image_2025-11-29_at_21.35.51_c03e9a98-removebg-preview.png" alt="School Badge" style="height: 60px; margin-right: 15px;">
+                <h1>God's <span>Angels</span> Junior School</h1>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="C:\Users\Maggie\Desktop\school\school.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h2>Admissions & Scholarships</h2>
+            <p>Join our nurturing community and discover opportunities for your child's education</p>
+            <div class="hero-buttons">
+                <a href="#apply" class="btn">Apply Now</a>
+                <a href="#scholarships" class="btn btn-outline">View Scholarships</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Admissions Process -->
+        <section id="admissions">
+            <div class="section-title">
+                <h2>Admissions Process</h2>
+                <p class="section-subtitle">Learn how to apply for your child's enrollment at God's Angels Junior School</p>
+            </div>
+            
+            <div class="content-card">
+                <div class="card-header">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h3>How to Apply</h3>
+                </div>
+                <div class="card-body">
+                    <p>At God's Angels Junior School, we welcome families who share our commitment to Christ-centered education. Our admissions process is designed to be straightforward and supportive.</p>
+                    
+                    <div class="process-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Initial Inquiry</h4>
+                                <p>Contact our admissions office to schedule a tour of our campus and learn more about our programs.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Application Submission</h4>
+                                <p>Complete and submit the application form along with required documents (birth certificate, previous school records, immunization records).</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Interview & Assessment</h4>
+                                <p>Participate in an informal interview with your child and parents to understand your family's needs and expectations.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Decision Notification</h4>
+                                <p>You will receive notification of the admissions decision within 2 weeks of your interview.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>Enrollment Confirmation</h4>
+                                <p>Upon acceptance, submit enrollment forms and required fees to secure your child's spot.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 30px; padding: 20px; background: var(--cream); border-radius: 10px;">
+                        <h4>Required Documents</h4>
+                        <ul>
+                            <li>Completed application form</li>
+                            <li>Birth certificate (certified copy)</li>
+                            <li>Previous school records/transcripts</li>
+                            <li>Immunization records</li>
+                            <li>Two recent photographs of the student</li>
+                            <li>Proof of residence</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scholarships -->
+        <section id="scholarships">
+            <div class="section-title">
+                <h2>Available Scholarships</h2>
+                <p class="section-subtitle">Financial assistance opportunities for qualifying families</p>
+            </div>
+            
+            <div class="scholarship-grid">
+                <div class="scholarship-card">
+                    <div class="scholarship-header">
+                        <h3>Merit Scholarship</h3>
+                    </div>
+                    <div class="scholarship-body">
+                        <h4>For Outstanding Students</h4>
+                        <p>This scholarship is awarded to students who demonstrate exceptional academic performance and character.</p>
+                        <ul>
+                            <li>Up to 50% tuition reduction</li>
+                            <li>Renewable annually</li>
+                            <li>Based on academic achievement</li>
+                            <li>Requires annual review</li>
+                        </ul>
+                        <a href="#apply" class="btn" style="display: inline-block; margin-top: 15px;">Apply Now</a>
+                    </div>
+                </div>
+                
+                <div class="scholarship-card">
+                    <div class="scholarship-header">
+                        <h3>Need-Based Aid</h3>
+                    </div>
+                    <div class="scholarship-body">
+                        <h4>For Families in Financial Need</h4>
+                        <p>Financial assistance provided based on demonstrated family need.</p>
+                        <ul>
+                            <li>Variable amount up to 75% of tuition</li>
+                            <li>Annual reapplication required</li>
+                            <li>Based on financial documentation</li>
+                            <li>Confidential process</li>
+                        </ul>
+                        <a href="#apply" class="btn" style="display: inline-block; margin-top: 15px;">Apply Now</a>
+                    </div>
+                </div>
+                
+                <div class="scholarship-card">
+                    <div class="scholarship-header">
+                        <h3>Community Service Award</h3>
+                    </div>
+                    <div class="scholarship-body">
+                        <h4>For Active Community Members</h4>
+                        <p>Recognizes families who contribute significantly to the community.</p>
+                        <ul>
+                            <li>25% tuition reduction</li>
+                            <li>One-year award</li>
+                            <li>Based on community involvement</li>
+                            <li>Requires documentation</li>
+                        </ul>
+                        <a href="#apply" class="btn" style="display: inline-block; margin-top: 15px;">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Application Form -->
+        <section id="apply">
+            <div class="section-title">
+                <h2>Application Form</h2>
+                <p class="section-subtitle">Start your journey with God's Angels Junior School</p>
+            </div>
+            
+            <div class="application-form">
+                <form id="admissionForm">
+                    <div class="form-row" style="display: flex; gap: 20px; margin-bottom: 25px;">
+                        <div class="form-group" style="flex: 1;">
+                            <label for="parentName">Parent/Guardian Full Name</label>
+                            <input type="text" id="parentName" name="parentName" required>
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label for="parentEmail">Email Address</label>
+                            <input type="email" id="parentEmail" name="parentEmail" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row" style="display: flex; gap: 20px; margin-bottom: 25px;">
+                        <div class="form-group" style="flex: 1;">
+                            <label for="parentPhone">Phone Number</label>
+                            <input type="tel" id="parentPhone" name="parentPhone" required>
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="address" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row" style="display: flex; gap: 20px; margin-bottom: 25px;">
+                        <div class="form-group" style="flex: 1;">
+                            <label for="studentName">Student's Full Name</label>
+                            <input type="text" id="studentName" name="studentName" required>
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label for="studentDOB">Date of Birth</label>
+                            <input type="date" id="studentDOB" name="studentDOB" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row" style="display: flex; gap: 20px; margin-bottom: 25px;">
+                        <div class="form-group" style="flex: 1;">
+                            <label for="currentGrade">Current Grade Level</label>
+                            <select id="currentGrade" name="currentGrade" required>
+                                <option value="">Select Grade</option>
+                                <option value="baby">Baby Class (Ages 3-4)</option>
+                                <option value="nursery">Nursery Class (Ages 4-5)</option>
+                                <option value="kg">Kindergarten (Ages 5-6)</option>
+                                <option value="primary1">Primary 1 (Ages 6-7)</option>
+                                <option value="primary2">Primary 2 (Ages 7-8)</option>
+                                <option value="primary3">Primary 3 (Ages 8-9)</option>
+                                <option value="primary4">Primary 4 (Ages 9-10)</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label for="desiredGrade">Desired Grade Level</label>
+                            <select id="desiredGrade" name="desiredGrade" required>
+                                <option value="">Select Grade</option>
+                                <option value="baby">Baby Class (Ages 3-4)</option>
+                                <option value="nursery">Nursery Class (Ages 4-5)</option>
+                                <option value="kg">Kindergarten (Ages 5-6)</option>
+                                <option value="primary1">Primary 1 (Ages 6-7)</option>
+                                <option value="primary2">Primary 2 (Ages 7-8)</option>
+                                <option value="primary3">Primary 3 (Ages 8-9)</option>
+                                <option value="primary4">Primary 4 (Ages 9-10)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="scholarship">Scholarship Interest</label>
+                        <select id="scholarship" name="scholarship">
+                            <option value="">None</option>
+                            <option value="merit">Merit Scholarship</option>
+                            <option value="need">Need-Based Aid</option>
+                            <option value="community">Community Service Award</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Additional Information / Questions</label>
+                        <textarea id="message" name="message"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width: 100%;">Submit Application</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>God's Angels Junior School</h3>
+                    <p>Providing Christ-centered education that nurtures minds, hearts, and spirits since 1998.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="academics.html"><i class="fas fa-chevron-right"></i> Academics</a></li>
+                        <li><a href="safety.html"><i class="fas fa-chevron-right"></i> Safety</a></li>
+                        <li><a href="faculty.html"><i class="fas fa-chevron-right"></i> Faculty</a></li>
+                        <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+                        <li><a href="admin.html"><i class="fas fa-chevron-right"></i> Administration</a></li>
+                        <li><a href="community.html"><i class="fas fa-chevron-right"></i> Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Admissions</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Admission Process</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Tuition & Fees</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Scholarships</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Enrollment Form</a></li>
+                        <li><a href="C:\Users\Maggie\Desktop\school\FAQ.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 God's Angels Junior School. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('nav ul');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+        
+        // Form Submission
+        const admissionForm = document.getElementById('admissionForm');
+        if (admissionForm) {
+            admissionForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const parentName = document.getElementById('parentName').value;
+                const parentEmail = document.getElementById('parentEmail').value;
+                const parentPhone = document.getElementById('parentPhone').value;
+                const studentName = document.getElementById('studentName').value;
+                
+                // Create mailto link with form data
+                const mailtoLink = `mailto:godsangeljuniorschoolmukono@gmail.com?subject=${encodeURIComponent('Admission Application: ' + studentName)}&body=${encodeURIComponent(
+                    `Admission Application\n\n` +
+                    `Parent/Guardian: ${parentName}\n` +
+                    `Email: ${parentEmail}\n` +
+                    `Phone: ${parentPhone}\n` +
+                    `Student: ${studentName}\n` +
+                    `Current Grade: ${document.getElementById('currentGrade').value}\n` +
+                    `Desired Grade: ${document.getElementById('desiredGrade').value}\n` +
+                    `Scholarship Interest: ${document.getElementById('scholarship').value}\n` +
+                    `Message: ${document.getElementById('message').value}\n\n` +
+                    `Thank you for considering God's Angels Junior School for your child's education. We will review your application and contact you soon.`
+                )}`;
+                
+                // Open the user's email client
+                window.location.href = mailtoLink;
+                
+                // Show success message
+                alert('Thank you for your application! Your email client should open to send your application to God\'s Angels Junior School.');
+                
+                // Reset form
+                this.reset();
+            });
+        }
+        
+        // Initialize animations
+        window.addEventListener('load', () => {
+            document.querySelector('.hero p').style.animationDelay = '0.2s';
+            document.querySelector('.hero p').style.opacity = '1';
+        });
+    </script>
+</body>
+</html>
